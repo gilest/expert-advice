@@ -16,7 +16,8 @@ You will need the following things properly installed on your computer.
 
 * `git clone <repository-url>` this repository
 * `cd ember-starter-project`
-* `npm install`
+* `yarn install`
+* `bower install`
 
 ## Running / Development
 
