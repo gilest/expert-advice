@@ -12,7 +12,11 @@
         {{#each model as |question|}}
           <tr>
             <td>{{question.views}}</td>
-            <td>{{question.title}}</td>
+            <td>
+              {{#link-to 'question' question.slug}}
+                {{question.title}}
+              {{/link-to}}
+            </td>
           </tr>
         {{/each}}
       </tbody>
