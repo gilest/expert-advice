@@ -1,6 +1,9 @@
 <div class="row h-screen">
   <main role="main" class="col-md-10">
-    Start building.
+
+    {{#each model as |question|}}
+      {{question.views}} {{question.title}}
+    {{/each}}
 
     {{outlet}}
   </main>
