@@ -1,7 +1,25 @@
 {{#bs-form formLayout="vertical" onSubmit=(action "createQuestion") model=question as |form|}}
-  {{form.element controlType="text" label="Title" property="title" customError=(attribute-errors question.errors.title)}}
-  {{form.element controlType="textarea" label="Description" property="description" customError=(attribute-errors question.errors.description)}}
-  {{form.element controlType="text" label="Tags (Separated by comma)" property="tags" customError=(attribute-errors question.errors.tags)}}
+  {{form.element
+    controlType="text"
+    label="Title"
+    property="title"
+    customError=(attribute-errors question.errors.title)
+    class=(if (attribute-errors question.errors.title) "has-error")
+  }}
+  {{form.element
+    controlType="textarea"
+    label="Description"
+    property="description"
+    customError=(attribute-errors question.errors.description)
+    class=(if (attribute-errors question.errors.description) "has-error")
+  }}
+  {{form.element
+    controlType="text"
+    label="Tags (Separatedby comma)"
+    property="tags"
+    customError=(attribute-errors question.errors.tags)
+    class=(if (attribute-errors question.errors.tags) "has-error")
+  }}
 
   {{bs-button defaultText="Post a question" type="primary" buttonType="submit"}}
 {{/bs-form}}
