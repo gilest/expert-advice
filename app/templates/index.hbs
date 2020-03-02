@@ -1,28 +1,26 @@
-<div class="row h-screen">
-  <main role="main" class="col-md-10">
+{{#if session.isAuthenticated}}
+  {{#link-to "ask" class="btn btn-primary"}}Ask a question{{/link-to}}
+{{/if}}
 
-      <table class="table">
-      <thead>
-        <tr>
-          <th>Views</th>
-          <th>Question</th>
-        </tr>
-      </thead>      
-      <tbody>
-        {{#each model as |question|}}
-          <tr>
-            <td>{{question.views}}</td>
-            <td>
-              {{#link-to 'question' question.id}}
-                {{question.title}}
-              {{/link-to}}
-            </td>
-          </tr>
-        {{/each}}
-      </tbody>
-    </table>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Views</th>
+      <th>Question</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |question|}}
+      <tr>
+        <td>{{question.views}}</td>
+        <td>
+          {{#link-to 'question' question.id}}
+            {{question.title}}
+          {{/link-to}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
 
-    {{page-numbers page=page totalPages=model.meta.page.pages}}
-  </main>
-</div>
-
+{{page-numbers page=page totalPages=model.meta.page.pages}}

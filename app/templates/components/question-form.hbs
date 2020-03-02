@@ -1,0 +1,7 @@
+{{#bs-form formLayout="vertical" onSubmit=(action "createQuestion") model=question as |form|}}
+  {{form.element controlType="text" label="Title" property="title" customError=(attribute-errors question.errors.title)}}
+  {{form.element controlType="textarea" label="Description" property="description" customError=(attribute-errors question.errors.description)}}
+  {{form.element controlType="text" label="Tags (Separated by comma)" property="tags" customError=(attribute-errors question.errors.tags)}}
+
+  {{bs-button defaultText="Post a question" type="primary" buttonType="submit"}}
+{{/bs-form}}
