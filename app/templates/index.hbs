@@ -1,0 +1,24 @@
+<div class="row h-screen">
+  <main role="main" class="col-md-10">
+
+      <table class="table">
+      <thead>
+        <tr>
+          <th>Views</th>
+          <th>Question</th>
+        </tr>
+      </thead>      
+      <tbody>
+        {{#each model as |question|}}
+          <tr>
+            <td>{{question.views}}</td>
+            <td>{{question.title}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+    {{outlet}}
+  </main>
+</div>
+
