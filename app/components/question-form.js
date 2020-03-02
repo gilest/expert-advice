@@ -1,20 +1,20 @@
 import Component from '@ember/component';
+import { task } from 'ember-concurrency';
 
 export default Component.extend({
   question: null,
   onSuccess(/* question */) {},
 
-  actions: {
-    async createQuestion(question) {
-      try {
-        await question.save();
-      } catch (error) {
-        if (!error.isAdapterError) {
-          throw error;
-        }
-        return;
+  saveQuestion: task(function * () {
+    const question = this.get('question');
+    try {
+      yield question.save();
+    } catch (error) {
+      if (!error.isAdapterError) {
+        throw error;
       }
-      this.get('onSuccess')(question);
+      return;
     }
-  }
+    this.get('onSuccess')(question);
+  })
 });
