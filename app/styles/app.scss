@@ -5,7 +5,11 @@ body, .h-screen {
   height: 100vh;
 }
 
-.form-group.has-error input {
+.form-group.has-error label {
+  color: #dc3545;
+}
+
+.form-group.has-error input, .form-group.has-error textarea {
   border-color: #dc3545;
 }
 

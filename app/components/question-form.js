@@ -1,7 +1,8 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  onSuccess(_question) {},
+  question: null,
+  onSuccess(/* question */) {},
 
   actions: {
     async createQuestion(question) {
@@ -16,5 +17,4 @@ export default Component.extend({
       this.get('onSuccess')(question);
     }
   }
-
 });
