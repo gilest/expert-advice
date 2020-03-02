@@ -8,3 +8,8 @@ body, .h-screen {
 .form-group.has-error input {
   border-color: #dc3545;
 }
+
+.nav-item__divider {
+  border-left: 1px solid #cacaca;
+  margin: 0 0.5rem;
+}

@@ -7,7 +7,7 @@ export default Route.extend({
     return this.store.createRecord("user");
   },
   actions: {
-    async signup() {
+    async register() {
       const user = this.controller.model;
       await user.save();
       await this.get("session").authenticate(
