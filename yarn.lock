@@ -2446,6 +2446,15 @@ ember-cli-broccoli-sane-watcher@^2.1.1:
     rsvp "^3.0.18"
     sane "^4.0.0"
 
+ember-cli-bs-pagination@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/ember-cli-bs-pagination/-/ember-cli-bs-pagination-0.0.4.tgz#c54b70c7198d2679a61aa7ce09901e3bd04ed6cf"
+  integrity sha1-xUtwxxmNJnmmGqfOCZAeO9BO1s8=
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-htmlbars "^2.0.1"
+    ember-cli-htmlbars-inline-precompile "^1.0.0"
+
 ember-cli-build-config-editor@0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/ember-cli-build-config-editor/-/ember-cli-build-config-editor-0.5.0.tgz#e19a06f4da2e3e579b407964b72df9fbf3839f4b"
