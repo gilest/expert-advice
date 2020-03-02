@@ -12,7 +12,7 @@
   <tbody>
     {{#each model as |question|}}
       <tr>
-        <td>{{question.views}}</td>
+        <td>{{views-summary question.views}}</td>
         <td>
           {{#link-to 'question' question.id}}
             {{question.title}}
