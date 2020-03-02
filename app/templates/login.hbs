@@ -9,8 +9,8 @@
         <label for="exampleInputPassword1">Password</label>
         {{input value=password type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"}}
       </div>
-      <button type="submit" class="btn btn-primary" {{action 'login' email password}}>Login</button>
-      or {{#link-to "signup"}}Sign up{{/link-to}}
+      <button type="submit" class="btn btn-primary" {{action 'login' email password}}>Log in</button>
+      or {{#link-to "register"}}Register{{/link-to}}
       {{#if errorMessage}}
         {{errorMessage}}
       {{/if}}
