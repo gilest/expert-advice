@@ -9,7 +9,8 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('login');
   this.route('register');
-  this.route('ask');
+  this.route('create-question', { path: 'ask' });
+  this.route('edit-question', { path: 'edit-question/:id' });
   this.route('question', { path: ':slug' });
 });
 
