@@ -11,9 +11,9 @@
       </div>
       <button type="submit" class="btn btn-primary login-form__submit" {{action 'login' email password}}>Log in</button>
       or {{#link-to "register"}}Register{{/link-to}}
-      {{#if errorMessage}}
-        <span class="login-form__error">{{errorMessage}}</span>
-      {{/if}}
     </form>
+    {{#if errorMessage}}
+      <div class="login-form__error pt-2 text-danger">{{errorMessage}}</div>
+    {{/if}}
   </div>
 </div>
