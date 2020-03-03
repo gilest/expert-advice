@@ -10,6 +10,17 @@
       <td>{{views-summary model.views}}</td>
       <td><h5>{{model.title}}</h5></td>
     </tr>
+    {{#if (eq model.user currentSession.user)}}
+      <tr>
+        <td></td>
+        <td>
+          {{#link-to "index" class="btn btn-info"}}Edit{{/link-to}}
+          <a href="#" class="btn btn-danger" {{action (perform deleteQuestion)}}>
+            {{if deleteQuestion.isRunning "Deleting..." "Delete"}}
+          </a>
+        </td>
+      </tr>
+    {{/if}}
     <tr>
       <td></td>
       <td>{{model.description}}</td>
@@ -22,7 +33,7 @@
         {{/each}}
       </td>
     </tr>
-    {{#if session.isAuthenticated}}
+    {{#if currentSession.isAuthenticated}}
       <tr>
         <td></td>
         <td>
