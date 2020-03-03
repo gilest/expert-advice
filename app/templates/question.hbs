@@ -1,18 +1,35 @@
 <table class="table">
-<thead>
-  <tr>
-    <th>Views</th>
-    <th>Question</th>
-  </tr>
-</thead>
-<tbody>
+  <thead>
+    <tr>
+      <th>Views</th>
+      <th>Question</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>{{views-summary model.views}}</td>
-      <td>{{model.title}}</td>
+      <td><h5>{{model.title}}</h5></td>
     </tr>
     <tr>
       <td></td>
       <td>{{model.description}}</td>
     </tr>
-</tbody>
+    <tr>
+      <td></td>
+      <td>
+        {{#each model.loadedAnswers as |answer|}}
+          <p>{{answer.body}}</p>
+        {{/each}}
+      </td>
+    </tr>
+    {{#if session.isAuthenticated}}
+      <tr>
+        <td></td>
+        <td>
+          <h5>Answer</h5>
+          {{answer-form question=model}}
+        </td>
+      </tr>
+    {{/if}}
+  </tbody>
 </table>
