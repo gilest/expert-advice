@@ -7,7 +7,9 @@ export default Controller.extend({
       this.set('question', this.store.createRecord('question'));
     },
     exitedRoute() {
-      this.get('question').unloadRecord();
+      if (this.get('question.isNew')) {
+        this.get('question').unloadRecord();
+      }
       this.set('question', null);
     },
     onQuestionCreated(question) {
