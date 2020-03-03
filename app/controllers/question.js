@@ -7,11 +7,9 @@ export default Controller.extend({
 
   deleteQuestion: task(function * () {
     const question = this.get('model');
-    try {
-      yield question.destroyRecord();
-    } catch (e) {
-      throw e;
-    }
+
+    yield question.destroyRecord();
+
     this.transitionToRoute('index');
   })
 });
