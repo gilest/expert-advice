@@ -2,8 +2,8 @@ import DS from 'ember-data';
 import { computed } from '@ember/object';
 
 export default DS.Model.extend({
-  user: DS.belongsTo('user'),
-  answers: DS.hasMany('answer'),
+  user: DS.belongsTo('user', { async: false }),
+  answers: DS.hasMany('answer', { async: false }),
   title: DS.attr('string'),
   description: DS.attr('string'),
   tags: DS.attr('string'),
