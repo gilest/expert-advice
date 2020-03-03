@@ -20,9 +20,7 @@
             {{question.title}}
           {{/link-to}}
           <br />
-          {{#each question.tagsArray as |tag|}}
-            {{#link-to "index" (query-params filter=tag page="1") class="badge badge-primary"}}{{tag}}{{/link-to}}
-          {{/each}}
+          {{question-tags question=question}}
         </td>
       </tr>
     {{/each}}

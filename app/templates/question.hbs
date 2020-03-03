@@ -8,7 +8,10 @@
   <tbody>
     <tr>
       <td>{{views-summary model.views}}</td>
-      <td><h5>{{model.title}}</h5></td>
+      <td>
+        <h5>{{model.title}}</h5>
+        {{question-tags question=model}}
+      </td>
     </tr>
     {{#if (eq model.user currentSession.user)}}
       <tr>
