@@ -3,7 +3,6 @@ import { underscore } from "@ember/string";
 import { pluralize } from "ember-inflector";
 import ENV from "../config/environment";
 import DataAdapterMixin from "ember-simple-auth/mixins/data-adapter-mixin";
-import { isPresent } from "@ember/utils";
 
 export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
   authorizer: "authorizer:oauth2",
