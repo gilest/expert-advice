@@ -13,7 +13,7 @@ export default Controller.extend({
       this.set('question', null);
     },
     onQuestionCreated(question) {
-      this.transitionToRoute('question', question.get('id'));
+      this.transitionToRoute('question', question.get('slug'));
     }
   }
 });

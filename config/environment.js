@@ -37,6 +37,8 @@ module.exports = function(environment) {
   }
 
   if (environment === "test") {
+    ENV.serverURL = '';
+
     // Testem prefers this...
     ENV.locationType = "none";
 
