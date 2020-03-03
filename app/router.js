@@ -1,5 +1,5 @@
-import EmberRouter from "@ember/routing/router";
-import config from "./config/environment";
+import EmberRouter from '@ember/routing/router';
+import config from './config/environment';
 
 const Router = EmberRouter.extend({
   location: config.locationType,
@@ -7,10 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route("login");
-  this.route("register");
+  this.route('login');
+  this.route('register');
   this.route('ask');
-  this.route('question', { path: ':id' });
+  this.route('question', { path: ':slug' });
 });
 
 export default Router;

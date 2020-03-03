@@ -8,6 +8,7 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   tags: DS.attr('string'),
   views: DS.attr('number'),
+  slug: DS.attr('string'),
 
   tagsArray: computed('tags', function() {
     return this.get('tags').split(',');
