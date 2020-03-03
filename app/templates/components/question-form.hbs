@@ -21,5 +21,5 @@
     class=(if (attribute-errors question.errors.tags) "has-error")
   }}
 
-  {{bs-button defaultText=(if saveQuestion.isRunning "Saving..." "Post a question") type="primary" buttonType="submit"}}
+  {{bs-button defaultText=(if saveQuestion.isRunning "Saving..." saveButtonText) type="primary" buttonType="submit"}}
 {{/bs-form}}
