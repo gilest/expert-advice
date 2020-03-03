@@ -15,6 +15,8 @@ export default DS.Model.extend({
   }),
 
   loadedAnswers: computed('answers.@each.hasDirtyAttributes', function() {
-    return this.get('answers').filter((answer) => !answer.get('hasDirtyAttributes'));
+    return this.get('answers').filter(
+      answer => !answer.get('hasDirtyAttributes')
+    );
   })
 });

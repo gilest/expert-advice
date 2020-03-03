@@ -20,7 +20,7 @@ export default Controller.extend({
         this.setProperties({
           filter: enteredText,
           page: 1
-        })
+        });
       }, 100);
     }
   }
