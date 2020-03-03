@@ -1,4 +1,4 @@
-<div class="d-flex h-100">
+<div class="login-form d-flex h-100">
   <div class="m-auto">
     <form>
       <div class="form-group">
@@ -9,10 +9,10 @@
         <label for="exampleInputPassword1">Password</label>
         {{input value=password type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"}}
       </div>
-      <button type="submit" class="btn btn-primary" {{action 'login' email password}}>Log in</button>
+      <button type="submit" class="btn btn-primary login-form__submit" {{action 'login' email password}}>Log in</button>
       or {{#link-to "register"}}Register{{/link-to}}
       {{#if errorMessage}}
-        {{errorMessage}}
+        <span class="login-form__error">{{errorMessage}}</span>
       {{/if}}
     </form>
   </div>

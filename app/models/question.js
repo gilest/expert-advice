@@ -11,7 +11,10 @@ export default DS.Model.extend({
   slug: DS.attr('string'),
 
   tagsArray: computed('tags', function() {
-    return this.get('tags').split(',');
+    if (this.get('tags')) {
+      return this.get('tags').split(',');
+    }
+    return [];
   }),
 
   loadedAnswers: computed('answers.@each.hasDirtyAttributes', function() {
