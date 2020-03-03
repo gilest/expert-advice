@@ -14,8 +14,8 @@
       <tr>
         <td></td>
         <td>
-          {{#link-to "index" class="btn btn-info"}}Edit{{/link-to}}
-          <a href="#" class="btn btn-danger" {{action (perform deleteQuestion)}}>
+          {{#link-to "edit-question" model.id class="btn btn-sm btn-secondary"}}Edit{{/link-to}}
+          <a href="#" class="btn btn-sm btn-danger {{if deleteQuestion.isRunning "disabled"}}" {{action (perform deleteQuestion)}}>
             {{if deleteQuestion.isRunning "Deleting..." "Delete"}}
           </a>
         </td>

@@ -1,5 +1,5 @@
 {{#if session.isAuthenticated}}
-  {{#link-to "ask" class="btn btn-primary"}}Ask a question{{/link-to}}
+  {{#link-to "create-question" class="btn btn-primary"}}Ask a question{{/link-to}}
 {{/if}}
 
 {{input value=initialSearchValue placeholder="Search" class="form-control" key-up=(action "filter")}}
@@ -16,12 +16,12 @@
       <tr>
         <td>{{views-summary question.views}}</td>
         <td>
-          {{#link-to 'question' question.slug}}
+          {{#link-to "question" question.slug}}
             {{question.title}}
           {{/link-to}}
           <br />
           {{#each question.tagsArray as |tag|}}
-            {{#link-to 'index' (query-params filter=tag page="1") class="badge badge-primary"}}{{tag}}{{/link-to}}
+            {{#link-to "index" (query-params filter=tag page="1") class="badge badge-primary"}}{{tag}}{{/link-to}}
           {{/each}}
         </td>
       </tr>
